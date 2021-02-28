@@ -20,7 +20,7 @@ export default class HermitPurple extends BaseCommand {
         {
           name: 'user',
           description: 'The user from which you want more information.',
-          type: 'mention',
+          type: 'string',
           default: 'Shows info about your own user'
         }
       ],

@@ -24,8 +24,8 @@ export default class Cinderella extends BaseCommand {
         {
           name: 'users',
           description: 'The users you want the avatar of.',
-          type: 'mention',
-          allow_sentence: true,
+          type: 'string',
+          is_sentence: true,
           default: 'Returns your avatar'
         }
       ],
@@ -38,7 +38,7 @@ export default class Cinderella extends BaseCommand {
    */
   async run(command) {
     const avatars = new Set()
-    const uniqArgs = [...new Set(this.args)]
+    const uniqArgs = [...new Set(this.args[0])]
 
     if (uniqArgs.length === 0) {
       avatars.add({

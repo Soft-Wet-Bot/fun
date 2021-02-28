@@ -17,17 +17,17 @@ export default class Wiki extends BaseCommand {
       name: 'wiki',
       aliases: ['wikia', 'find'],
       description: 'Search the jojo wiki for something',
-      usage: 'wiki <#term>',
+      usage: 'wiki <term>',
       params: [
         {
           name: 'term',
           description: 'The term to be searched',
           type: 'string',
-          allow_sentence: true,
+          is_sentence: true,
           required: true
         }
       ],
-      example: 'wiki Soft&Wet'
+      example: 'wiki Soft & Wet'
     })
   }
 
